@@ -1,0 +1,81 @@
+@import 'variables';
+@import 'mixins';
+
+.button {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0px;
+  color:#000;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  height: 90px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0px 35px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  transition-property: border-color,background-color;
+  @include buttonRecolor($white);
+  &--red {
+    @include buttonRecolor($red);
+  }
+  &--medium {
+    height: 70px;
+  }
+  &--small {
+    height: 50px;
+  }
+  &--transparent {
+    background-color: transparent;
+    &:hover {
+      color:#000;
+    }
+  }
+  &--rounded {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 11px;
+    &.button--small {
+      @include border-radius(25px);
+    }
+    &.button--medium {
+      @include border-radius(35px);
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+  &--iconize {
+    padding-right: 0px;
+    .button__content {
+
+    }
+    .button__icon {
+      height: 100%;
+      width: 90px;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-left: 35px;
+    }
+    &.button--medium {
+      .button__icon {
+        width: 70px;
+      }
+    }
+    &.button--small {
+      .button__icon {
+        width: 70px;
+      }
+    }
+  }
+
+}
