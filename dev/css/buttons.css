@@ -34,6 +34,11 @@
   .button.button--iconize .button__icon {
     background-color: rgba(255, 255, 255, 0.4);
     border-left: 1px solid #fff; }
+  @media (max-width: 1199px) {
+    .button {
+      font-size: 12px; } }
+  .button img {
+    margin-right: 10px; }
   .button--red {
     background-color: #E01E58;
     border: 1px solid #E01E58;
@@ -66,6 +71,9 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 11px; }
+    @media (max-width: 1199px) {
+      .button--rounded {
+        font-size: 11px; } }
     .button--rounded.button--small {
       -webkit-border-radius: 25px;
       -moz-border-radius: 25px;
@@ -76,8 +84,6 @@
       -moz-border-radius: 35px;
       -ms-border-radius: 35px;
       border-radius: 35px; }
-    .button--rounded img {
-      margin-right: 10px; }
   .button--iconize {
     padding-right: 0px; }
     .button--iconize .button__icon {
@@ -90,6 +96,8 @@
       align-items: center;
       justify-content: center;
       margin-left: 35px; }
+      .button--iconize .button__icon img {
+        margin: 0; }
     .button--iconize.button--medium .button__icon {
       width: 70px; }
     .button--iconize.button--small .button__icon {
