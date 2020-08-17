@@ -34,6 +34,23 @@ let App = {
    * @description  Инициализация обработчиков
    */
   initHandlers: function () {
+
+    // ------
+    // Обработка клика по ,ehuth меню
+    // ------
+    $('.js-burger').click(function(){
+      let menu = $(this).attr('data-toggle')
+      let status = $(this).attr('data-status');
+      if (status =='closed') {
+        $(this).addClass('open');
+        $(this).attr('data-status','opened');
+        $(menu).addClass('page-header__menu--show');
+      } else {
+        $(this).attr('data-status','closed');
+        $(this).removeClass('open');
+        $(menu).removeClass('page-header__menu--show');
+      }
+    });
     // ------
     // Обработка клика по кнопке показа формы
     // ------

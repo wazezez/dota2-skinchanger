@@ -37,6 +37,10 @@
   @media (max-width: 1199px) {
     .button {
       font-size: 12px; } }
+  @media (max-width: 575px) {
+    .button {
+      height: 80px;
+      font-size: 11px; } }
   .button img {
     margin-right: 10px; }
   .button--red {
@@ -60,8 +64,14 @@
       border-left: 1px solid #E01E58; }
   .button--medium {
     height: 70px; }
+    @media (max-width: 575px) {
+      .button--medium {
+        height: 60px; } }
   .button--small {
     height: 50px; }
+    @media (max-width: 575px) {
+      .button--small {
+        height: 40px; } }
   .button--transparent {
     background-color: transparent; }
     .button--transparent:hover {

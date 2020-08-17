@@ -25,30 +25,42 @@
 </head>
 <body>
 
-	<section class="page-header" id="page-header">
+	<section class="page-header page-header--screenheight" id="page-header">
 		<div class="page-header__background">
 			<img src="/images/background.png" alt="Enigma">
 		</div>
 		<div class="page-header__top">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="col-lg-1">
+					<div class="col-lg-1 col-2 order-1">
 						<div class="page-header__logo">
 							<img src="/images/logo.png" alt="Skinchanger.cc">
 						</div>
 					</div>
-					<div class="col-lg-6">
-						<ul class="page-header__menu">
+					<div class="col-lg-6 order-3 order-xl-2 col-2">
+						<div class="page-header__burger">
+							<!-- Bars menu -->
+							<button class="bars js-burger" id="touch-menu"  data-status="closed" data-toggle="#hero-menu">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+							<!-- /Bars menu -->
+						</div>
+						<ul class="page-header__menu" id="hero-menu">
 							<li><a href="">Преимущества</a></li>
 							<li><a href="">Стоимость подписки</a></li>
 						</ul>
 					</div>
-					<div class="col-lg-5">
+					<div class="col-lg-5 order-2 order-xl-3 col-8">
 						<div class="page-header__buttons">
-							<button class="button button--rounded button--transparent button--small">Войти</button>
-							<button class="button button--rounded button--red button--small">
+							<button class="button button--rounded button--transparent button--small page-heaeder__button page-header__button--login">
+								<img src="/images/svg/login.svg" alt="Войти">
+								<span>Войти</span>
+							</button>
+							<button class="button button--rounded button--red button--small page-header__button page-header__button--register">
 								<img src="/images/svg/ant-design_user-add-outlined.svg" alt="Новый аккаунт">
-								Создать аккаунт
+								<span>Создать аккаунт</span>
 							</button>
 						</div>
 					</div>
