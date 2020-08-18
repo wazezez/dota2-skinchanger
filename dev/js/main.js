@@ -1,5 +1,15 @@
 let App = {
   /**
+   * @module       Validate
+   * @description  Методы для валидации различных полей
+   */
+  validate: {
+    email: function (email) {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    }
+  },
+  /**
    * @module       Card
    * @description  Инициализация поиска типа кредитной карты по номеру
    */
@@ -34,7 +44,7 @@ let App = {
    * @description  Инициализация обработчиков
    */
   initHandlers: function () {
-
+    let app = this;
     // ------
     // Обработка клика по ,ehuth меню
     // ------
@@ -63,7 +73,7 @@ let App = {
     // Обработка ввода данных в поле ввода почты
     // ------
     $('#order-usermail').on('change keyup',function(){
-      if (this.value.length > 1) {
+      if (app.validate.email(this.value)) {
         $('.orderform__creditbutton,.orderform__gpaybutton').prop('disabled',false);
       } else {
         $('.orderform__creditbutton,.orderform__gpaybutton').prop('disabled',true);

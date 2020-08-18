@@ -1,6 +1,14 @@
 @import 'variables';
 @import 'mixins';
 
+button {
+  outline: 0px;
+  cursor: pointer;
+  &:focus {
+    outline: 0px;
+  }
+}
+
 .button {
   display: -webkit-inline-flex;
   display: -ms-inline-flex;
