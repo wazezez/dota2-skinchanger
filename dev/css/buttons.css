@@ -118,3 +118,35 @@ button {
       width: 70px; }
     .button--iconize.button--small .button__icon {
       width: 70px; }
+  .button--animated {
+    overflow: hidden;
+    position: relative; }
+    .button--animated:after {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: rgba(255, 255, 255, 0.4);
+      transition: transform .3s ease;
+      bottom: -5px;
+      left: -5px;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      animation: buttonBlink infinite ease-in-out 5s;
+      z-index: 5;
+      pointer-events: none;
+      border-radius: 50%; }
+
+@keyframes buttonBlink {
+  75% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(500);
+    -moz-transform: scale(500);
+    -o-transform: scale(500);
+    transform: scale(500);
+    opacity: 0.0; } }
